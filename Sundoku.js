@@ -39,7 +39,7 @@ const hamburger = document.querySelector('.js-hamburger');
 
  const mainBooks = [{
   id: 'book-1',
-  cover: 'Alice_in_wonderland.png',
+  cover: '0013805873-M.jpg',
   title: 'Alices adventures in wonderland',
   price: 'Free',
   author: 'Lewis Carroll',
@@ -52,12 +52,12 @@ const hamburger = document.querySelector('.js-hamburger');
   category: 'Kids',
 },{
   id: 'book-2',
-  cover: 'witchy_eye.png',
+  cover: 'Frankenstein.png',
   title: 'Frankenstein',
   price: 'Free',
   author: 'Mary Shelley',
   isAvailableToRead: true,
-  readLink: 'https://google.com',
+  readLink: 'reading.html?id=book-2',
   genres: ['Fantasy', 'Adventure'],
   plot: 'Victor Frankenstein, a young scientist, builds a sapient creature out of dead body parts and rejects it out of horror, starting a tragic cycle of revenge.',
   age: '15+',
@@ -65,12 +65,12 @@ const hamburger = document.querySelector('.js-hamburger');
   category: 'Fantasy'
 },{
   id: 'book-3',
-  cover: 'dracula.jpg',
+  cover: 'Dracula.png',
   title: 'Dracula',
   price: 'Free',
   author: 'Bram Stoker',
   isAvailableToRead: true,
-  readLink: 'https://google.com',
+  readLink: 'reading.html?id=book-3',
   genres: ['Horror', 'Action'],
   plot: 'English solicitor Jonathan Harker visits the Transylvanian castle of Count Dracula, who then moves to England to terrorize Whitby and London. A group led by Professor Abraham Van Helsing hunts and destroys him.',
   age: '13+',
@@ -78,17 +78,69 @@ const hamburger = document.querySelector('.js-hamburger');
   category: 'Fantasy',
 },{
   id: 'book-4',
-  cover: 'Oz.jpg',
+  cover: '0008884619-M.jpg',
   title: 'The Wonderful Wizard of Oz',
   price: 'Free',
   author: 'Frank Baum',
   isAvailableToRead: true,
-  readLink: '',
+  readLink: 'reading.html?id=book-4',
   genres: ['Kids','Fantasy'],
   plot: 'Dorothy Gale, a young girl living on a dreary Kansas farm, is swept away alongside her dog Toto by a powerful cyclone. They land in the magical country of Oz, where Dorothys farmhouse accidentally crushes and kills the Wicked Witch of the East. To find a way back home to her family, Dorothy is gifted the witchs magical Silver Shoes and instructed to follow the Yellow Brick Road to the Emerald City to seek the aid of the Great Wizard.',
   age: 'Family',
   size: '12kb',
   category: 'Kids'
+},{
+   id: 'book-5',
+   cover: 'AILD.png',
+   title: 'As I lay Dying',
+   price: 'Free',
+   author: '',
+   isAvailableToRead: true,
+   readLink: 'reading.html?id=book-5',
+   genres: ['Drama','Romance'],
+   plot: '',
+   age: '16',
+   size: '',
+   category: 'Romance'
+},{
+   id: 'book-6',
+   cover: 'Pride_and_prejudice.png',
+   title: 'Pride and Prejudice',
+   price: 'Free',
+   author: '',
+   isAvailableToRead: true,
+   readLink: 'reading.html?id=book-6',
+   genres: ['Drama','Romance'],
+   plot: '',
+   age: '16',
+   size: '',
+   category: 'Romance'
+},{
+   id: 'book-7',
+   cover: 'Triplanitary.png',
+   title: 'Triplanitary',
+   price: 'Free',
+   author: '',
+   isAvailableToRead: true,
+   readLink: 'reading.html?id=book-7',
+   genres: ['Space Opera','Sci-fi'],
+   plot: '',
+   age: '16',
+   size: '',
+   category: 'Science Fiction'
+},{
+   id: 'book-8',
+   cover: '0012512392-L.jpg',
+   title: 'Planet of the Damned',
+   price: 'Free',
+   author: '',
+   isAvailableToRead: true,
+   readLink: 'reading.html?id=book-8',
+   genres: ['Space Opera','Sci-fi'],
+   plot: '',
+   age: '16',
+   size: '',
+   category: 'Science Fiction'
 }];
 
 
@@ -386,7 +438,7 @@ mainBooks.forEach((book) => {
     ${actionButtonHtml}
     
     <button class="add-to-wishlist-btn js-add-to-wishlist-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  stroke="currentColor" stroke-width="2"  fill="none" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  stroke="currentColor" stroke-width="2"  fill="none" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart wishlist-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
       Add to Wishlist 
     </button>
     
@@ -468,6 +520,7 @@ readBtns.forEach((readBtn) => {
 
 
 
+
 const wishlistBtns = document.querySelectorAll('.js-add-to-wishlist-btn');
 
 wishlistBtns.forEach(btn => {
@@ -502,21 +555,22 @@ wishlistBtns.forEach(btn => {
     }
 
     
+
+    const heart = document.querySelectorAll('.wishlist-heart');
+    
+    heart.forEach(heart => {
+      if(isAlreadyInWishlist) {
+      heart.style="fill: red; color: red";
+    } else {
+      heart.style="fill: none; color: currentColor;"
+      }
+      
+  });
+
+
     
   });
 });
-
-/*const filterPills = document.querySelectorAll('.filter-btn');
-filterPills.forEach(pill => {
-  pill.addEventListener('click', () => {
-
-    filterPills.forEach(btn => btn.classList.remove('filter-on'));
-    pill.classList.add('filter-on');
-
-    
-  });  
-});*/
-
 
 
  document.addEventListener("DOMContentLoaded", () => {
@@ -550,5 +604,26 @@ const mainContainer = document.querySelector(".main-element");
 
 
 
+let lastScrollY = window.scrollY;
+let ticking = false;
 
+const header = document.querySelector('header');
+const navigationBar = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+  if(!ticking) {
+    window.requestAnimationFrame(() => {
+    if(window.scrollY > lastScrollY && window.scrollY > 50 ) {
+      header.style.transform="translateY(-100%)";
+      navigationBar.style.transform="translateY(100%)"
+    } else {
+      header.style.transform="translateY(0)";
+      navigationBar.style.transform="translateY(0)"
+    }
+      lastScrollY = window.scrollY;
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
 
