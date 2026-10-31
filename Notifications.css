@@ -1,0 +1,86 @@
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+  @font-face {
+      font-family: 'playfair';
+      src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'bangers';
+      src: url('fonts/Bangers-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'comorantSC';
+      src: url('fonts/CormorantSC-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Syncopate';
+      src: url('fonts/Syncopate-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+
+:root {
+  --grey: rgb(248, 249, 250);
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+}
+
+.newLabel {
+  background-color: var(--grey);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+.notTypeImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(0,136,246);
+  object-fit: cover;
+  margin: 15px 0px; 
+}
+
+.notification-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.backBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px Solid var(--grey);
+  border-radius: 50%;
+  background-color: white;
+}

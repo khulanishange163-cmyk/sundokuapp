@@ -1,0 +1,544 @@
+:root {
+  --grey: rgb(248, 249, 250);
+  --blue: rgb(50,107,255);
+  --green: rgb(50,255,152);
+  --black: rgb(0,0,0);
+  --white: rgb(255,255,255);
+  --background: rgb(255,255,255);
+  --text: rgb(0,0,0);
+  --light-header-color: rgba(250,250,250,0.53);
+  --notDot-bdr: rgb(255,255,255);
+  --rough-grey: rgb(181,185,189);
+  --invert: 1;
+  --gradient: linear-gradient(
+        30deg,
+        var(--blue), var(--green)
+  );
+}
+
+:root[data-theme="dark"] {
+    --background: rgb(0, 0, 0);
+    --white: rgb(0, 0, 0);
+    --black: rgb(247, 247, 247);
+    --grey: rgb(48, 49, 50);
+    --lightwhite: rgba(0, 0, 0, 0.53);
+}
+
+:root[data-theme="galaxy"] {
+    --background: linear-gradient(
+        90deg,
+        rgb(2, 2, 2),
+        rgb(102, 102, 102),
+        rgb(0, 0, 0)
+    );
+    --grey: linear-gradient(70deg, rgb(22, 22, 22), rgb(0, 0, 0));
+    --black: rgb(242, 242, 242);
+    --white: rgb(0, 0, 0);
+    --lightwhite: rgba(0, 0, 0, 0.53);
+    --gradient: linear-gradient(
+        80deg,
+        rgb(119, 119, 119),
+        rgb(46, 46, 46),
+        rgb(0, 0, 0)
+    );
+}
+
+
+@font-face {
+      font-family: 'Syncopate';
+      src: url('fonts/Syncopate-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+  @font-face {
+      font-family: 'playfair';
+      src: url('fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'bangers';
+      src: url('fonts/Bangers-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'comorantSC';
+      src: url('fonts/CormorantSC-Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+}
+
+  @font-face {
+      font-family: 'Aquire';
+      src: url('fonts/Aquire-BW0ox.otf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+@font-face {
+  font-family: 'Sdasian';
+  src: url('fonts/Sdasian-WyDon.ttf') format('truetype');
+}
+
+/*NEW FONTS*/
+
+@font-face {
+  font-family: 'Glitch';
+  src: url('fonts/GlitchGoblin-2O87v.ttf');
+}
+
+@font-face {
+  font-family: 'AvengFont';@font-face {
+  font-family: VampireWars;
+  src: url('fonts/Vampire Wars.ttf');
+}
+
+@font-face {
+  font-family: AngelWish;
+  src: url('fonts/Angel wish.ttf');
+}
+
+@font-face {
+  font-family: FaithCollapsing;
+  src: url('fonts/Faith Collapsing.ttf');
+}
+  src: url('fonts/AvengeanceHeroicAvengerNormal-xyVr.otf');
+}
+
+@font-face {
+  font-family: Transformers;
+  src: url('fonts/Transformers Movie.ttf');
+}
+
+@font-face {
+  font-family: BookLetter;
+  src: url('fonts/GoudyBookletter1911-Regular.ttf');
+}
+
+@font-face {
+  font-family: Syne;
+  src: url('fonts/Syne-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Railway;
+  src: url('fonts/Raleway-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Alumni;
+  src: url('fonts/AlumniSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: Creepster;
+  src: url('fonts/Creepster-Regular.ttf');
+}
+
+@font-face {
+  font-family: HighSchoolSans;
+  src: url('fonts/HighSchoolUsaSans-52vx.ttf');
+}
+
+@font-face {
+  font-family: HighSchoolSerif;
+  src: url('fonts/HighSchoolUsaSerif-6vwM.ttf');
+}
+
+@font-face {
+  font-family: ElektrixWizard;
+  src: url('fonts/MgfElektrixWizardsPersonalUse-KVR9l.otf');
+}
+
+@font-face {
+  font-family: VampireWars;
+  src: url('fonts/Vampire Wars.ttf');
+}
+
+@font-face {
+  font-family: AngelWish;
+  src: url('fonts/Angel wish.ttf');
+}
+
+@font-face {
+  font-family: FaithCollapsing;
+  src: url('fonts/Faith Collapsing.ttf');
+}
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    color: var(--black);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--black);
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    background: var(--lightwhite);
+    backdrop-filter: blur(15px);
+    padding: 5px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+main {
+    padding: 10px 5%;
+}
+
+button {
+    background: var(--grey);
+}
+
+.profile-img-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    object-fit: cover;
+    background-color: var(--rough-grey);
+}
+
+.box-container {
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.gear-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gear-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.scroll-bar {
+    overflow-x: auto;
+    padding: 5px 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.setting-filter-btn {
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.fill {
+    color: rgb(255, 255, 255);
+    background: var(--blue);
+}
+
+.setting-card {
+    background: var(--grey);
+    padding: 15px 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.theme-btn {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+}
+
+.email {
+  max-width: 200px;
+    overflow-wrap: break-word;
+}
+
+.light-theme-btn {
+    background: var(--white);
+}
+
+.dark-theme-btn {
+    background: var(--white);
+}
+
+.Christmas-theme-btn {
+    background: var(--white);
+}
+
+.active {
+    background: var(--blue);
+    color: rgb(255, 255, 255);
+}
+
+.more-btn {
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    background: transparent;
+    color: rgb(13, 134, 255);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.username {
+    font-weight: 600;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+    gap: 8px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.backBtn {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.galaxy-theme-btn {
+    background: var(--white);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    transition: 1s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    background-color: rgb(255, 255, 255);
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: 1s;
+    position: absolute;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background: var(--blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.setting-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.get-font-btn {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    color: rgb(255, 255, 255);
+    background-color: var(--blue);
+    border-radius: 25px;
+}
+
+.delete-down-btn {
+    padding: 10px 15px;
+    border: 1px solid rgb(255, 35, 35);
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.choose-font {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+}
+
+.select {
+    padding: 5px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    outline: none;
+}
+
+.pickFontBtn {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+}
+
+.fontSet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    justify-content: space-evenly;
+    align-self: flex-end;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-top: 60px;
+}
+
+.clock-btn {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.changes-not-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.changes-notification {
+  position: fixed;
+  bottom: -100%;
+  width: 80%;
+  background-color: var(--grey);
+  padding: 20px 15px;
+  border-radius: 15px;
+  box-shadow: 2px 5px 10px rgb(215,215,215);
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 1s ease-out;
+}
+
+.notif-on {
+  bottom: 25px;
+}
+
+.notif-off {
+  bottom: -100%;
+}
+
+.logout-btn {
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.loginBtn {
+  border: 1px solid transparent;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 25px;
+  background-color: black;
+  color: var(--blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}

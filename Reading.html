@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ai</title>
+  <link rel="stylesheet" href="Reading.css">
+  
+</head>
+<body>
+  <header>
+    <select class="chapter-selector">
+      <option>
+        <h3 class="chapter-num">
+    Chapter 1
+  </h3>
+      
+      </option>
+    </select>
+      
+
+    <button class="header-btn">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paintbrush-vertical-icon lucide-paintbrush-vertical"><path d="M10 2v2"/><path d="M14 2v4"/><path d="M17 2a1 1 0 0 1 1 1v9H6V3a1 1 0 0 1 1-1z"/><path d="M6 12a1 1 0 0 0-1 1v1a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v2.9a2 2 0 1 0 4 0V17a1 1 0 0 1 1-1h2a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1"/></svg>
+      <!--more-->
+    </button>
+  
+  <button class="header-btn js-fullScreenBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-maximize-icon lucide-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+    <!--Full screen-->
+  </button>
+  <button class="header-btn js-info-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-search-icon lucide-book-search"><path d="M11 22H5.5a1 1 0 0 1 0-5h4.501"/><path d="m21 22-1.879-1.878"/><path d="M3 19.5v-15A2.5 2.5 0 0 1 5.5 2H18a1 1 0 0 1 1 1v8"/><circle cx="17" cy="18" r="3"/></svg>
+    <!--info-->
+  </button>
+
+    <button class="header-btn js-ai-tools-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-astroid-icon lucide-astroid"><path d="M12.983 21.186a1 1 0 0 1-1.966 0 10 10 0 0 0-8.203-8.203 1 1 0 0 1 0-1.966 10 10 0 0 0 8.203-8.203 1 1 0 0 1 1.966 0 10 10 0 0 0 8.203 8.203 1 1 0 0 1 0 1.966 10 10 0 0 0-8.203 8.203"/></svg>
+      <!--Tools-->
+    </button>
+  </header>
+  
+  <div class="page-number-container">
+    <p class="page-num">
+      Page 1/1
+    </p>
+  </div>
+    
+  
+  <div class="ai-tools js-ai-tools-menu">
+        <button class="ai-tools-btn show-translate-bar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages-icon lucide-languages"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+      Translate 
+        </button>
+    <button class="ai-tools-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+      Summerize chapter 
+    </button>
+    <button class="ai-tools-btn summerize-page">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkle-icon lucide-sparkle"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/></svg>
+      Summerize page
+    </button>
+    <button class="ai-tools-btn simplifyBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-sparkles-icon lucide-pencil-sparkles"><path d="M10 3H8"/><path d="m15.007 5.008 3.987 3.986"/><path d="M20 15v4"/><path d="M21.174 6.813a2.82 2.82 0 0 0-3.986-3.987L3.842 16.175a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="M22 17h-4"/><path d="M4 5v4"/><path d="M6 7H2"/><path d="M9 2v2"/></svg>
+      Simplify page
+    </button>
+
+<div>
+  <div class="hidden-select">
+  
+  <select class="age">
+    <option value="4">
+      4 years 
+    </option>
+    <option value="5">
+      5 years
+    </option>
+    <option value="6">
+      6 years
+    </option>
+    <option value="7">
+      7 years 
+    </option>
+    <option value="8">
+      8 years
+    </option>
+    <option value="9">
+      9 years
+    </option>
+    <option value="10">
+      10 years 
+    </option>
+    <option value="11">
+      11 years
+    </option>
+    <option value="12">
+      12 years 
+    </option>
+    <option value="13">
+      13 years 
+    </option>
+    <option value="14">
+      14 years 
+    </option>
+    <option value="15">
+      15 years 
+    </option>
+    <option value="16">
+      16 years 
+    </option>
+    <option value="17">
+      17 years 
+    </option>
+    <option value="18">
+      18 years
+    </option>
+    <option value="19">
+      19 years 
+    </option>
+  </select>
+  <button class="simplifyAIBtn">
+    Simplify
+  </button>
+</div>
+</div>
+
+
+
+
+
+
+    
+    <button class="ai-tools-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-a-icon lucide-book-a"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="m8 13 4-7 4 7"/><path d="M9.1 11h5.7"/></svg>
+      Identify vocabulary 
+    </button>
+    <button class="ai-tools-btn js-add-key-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key-round-icon lucide-key-round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+      Add key info
+    </button>
+  </div>
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+ 
+  <div class="hidden-info js-hidden-info">
+    <h2 id="book-title"></h2>
+    <p class="plot">
+  A STUNNING BAEN BOOKS DEBUT. A brilliant Americana flintlock fantasy novel set in a world of Appalachian magic that works. Sarah Calhoun is the fifteen-year-old daughter of the Elector Andrew Calhoun, one of Appalachee’s military heroes and one of the electors who gets to decide who will next ascend as the Emperor of the New World. None of that matters to Sarah. She has a natural talent for hexing and one bad eye, and all she wants is to be left alone—especially by outsiders. But Sarah’s world gets turned on its head at the Nashville Tobacco Fair when a Yankee wizard-priest tries to kidnap her. Sarah fights back with the aid of a mysterious monk named Thalanes, who is one of the not-quite-human Firstborn, the Moundbuilders of the Ohio. It is Thalanes who reveals to Sarah a secret heritage she never dreamed could be hers. Now on a desperate quest with Thalanes to claim this heritage, she is hunted by the Emperor’s bodyguard of elite dragoons, as well as by darker things—shapeshifting Mockers and undead Lazars, and behind them a power more sinister still. If Sarah cannot claim her heritage, it may mean the end to her, her family—and to the world where she is just beginning to find her place.
+    </p>
+
+    <h3>
+      Key lines from chapter 1 
+    </h3>
+  </div>
+
+  <main>
+    <div class="book-content-text js-book-content-text js-page-html" id="outPut"></div>
+  </main>
+
+
+  
+  <div class="anchor-bottom-bar">
+      <div class="add-key-info-table js-key-table">
+    <div class="key-search-container">
+      <input type="text" placeholder="Add key lines to remember later" class="key-search-input js-note-input">
+      <button class="add-btn js-add-note-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255,255,255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      </button>
+    </div>
+        <div class="key-select-Btns">
+          <button class="selectBtn manual">
+            Manual Select
+          </button>
+          <button class="selectBtn aiSel">
+            AI selector
+          </button>
+        </div>
+
+        <div>
+          <h3>
+            Saved notes:
+          </h3>
+        </div>
+        
+        <div class="js-notes notes"></div>
+      </div>
+
+  </div>
+
+<div class="translate-bar js-translate-bar">
+  <div class="translate-search-bar-container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="var(--rough-grey)" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"></path></svg>
+    <input type="search" placeholder="Search for a language" class="translate-search-input">
+  </div>
+
+
+
+  <div class="js-languages" style="width: 90%;"></div>
+
+</div>
+<script src="Books.js" type="module"></script>
+ <script src="Reading.js" type="module"></script>
+</body>
+</html>

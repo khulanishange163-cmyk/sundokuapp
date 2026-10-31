@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>profile</title>
+  <link rel="stylesheet" href="profile.css">
+  
+  
+</head>
+<body>
+  <header>
+    <a href="index.html">
+          <button class="backBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+    </a>
+
+    
+    <div>
+<button class="loginBtn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in"><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></svg>
+  
+  Login 
+</button>
+    </div>
+  </header>
+  <div class="box-container">
+    <div class="profile-img-container">
+      <img src="profile/default_profile.png" class="profile-img" alt="profile picture">
+    </div>
+
+    <div class="names">
+      <p class="username">
+        @Username 
+      </p>
+      <p class="email">
+        useremail@gmail.com
+      </p>
+
+    </div>
+  </div>
+
+  <!--<div class="scroll-bar">
+     <button class="setting-filter-btn fill">
+       All
+     </button>
+
+    <button class="setting-filter-btn">
+      Appearance 
+    </button>
+
+    <button class="setting-filter-btn">
+      Downloads
+    </button>
+
+    <button class="setting-filter-btn">
+      Kids & family 
+    </button>
+
+    <button class="setting-filter-btn">
+      Rewards 
+    </button>
+
+    <button class="setting-filter-btn">
+      Privacy and security 
+    </button>
+    <button class="setting-filter-btn">
+      Account 
+    </button>
+  </div>-->
+
+  <main>
+
+    <div class="head">
+      <h3>
+        Appearance
+      </h3>
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      
+    </div>
+    
+    <div class="setting-card">
+
+      <p>
+        Theme
+      </p>
+      
+      <div class="btns">
+
+        <button class="theme-btn light-theme-btn js-change-theme-btn">
+          Dark theme
+        </button>
+        <button class="theme-btn galaxy-theme-btn">
+          Galaxy
+        </button>
+
+        <button class="theme-btn Christmas-theme-btn">
+          Cartoon 
+        </button>
+        
+      </div>
+    </div>
+
+        <div class="setting-card">
+      <div class="choose-font">
+        Font:
+        <select class="select js-font-selector">
+          <option value="inter">
+            Inter
+          </option>
+          <option value="playfair">
+            Playfair
+          </option>
+          <option value="bangers">
+            Bangers
+          </option>
+          <option value="comorantSC">
+            ComorantSC
+          </option>
+          <option value="Syncopate">
+            Syncopate
+          </option>
+          <option value="Orbitron">
+            Orbitron
+          </option>
+          <option value="Aquire">
+            Aquire
+          </option> 
+          <option value="Sdasian">
+            Sdasian
+          </option>
+          <option value="Glitch">
+            Glitch
+          </option>
+          <option value="AvengFont">
+            Avenge
+          </option>
+          <option value="Transformers">
+            Transformers 
+          </option>
+          <option value="BookLetter">
+            Book letter 
+          </option>
+          <option value="Syne">
+            Syne
+          </option>
+          <option value="Railway">
+            Railway
+          </option>
+          <option value="Alumni">
+            AlumniSans
+          </option>
+          <option value="Creepster">
+            Creepster
+          </option>
+          <option value="HighSchoolSans">
+            High School USA Sans
+          </option>
+          <option value="HighSchoolSerif">
+            High School USA Serif
+          </option>
+          <option value="ElektrixWizard">
+            Elektrix Wizard 
+          </option>
+          <option value="VampireWars">
+            Vampire Wars
+          </option>
+          <option value="AngelWish">
+            Angel Wish
+          </option>
+          <option value="FaithCollapsing">
+            Faith Collapsing 
+          </option>
+            </select>
+      </div>
+          <div class="fontSet">
+            <a href="http://fonts.google.com">
+              <button class="get-font-btn">
+              Get new fonts
+              </button>
+            </a>
+            <button class="pickFontBtn js-set-font-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255,255,255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg> 
+            </button>
+          </div>
+        </div>
+
+
+
+    <div class="head">
+    <h3>
+      Download settings
+    </h3>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    
+
+
+
+    <div class="setting-card">
+
+      <div class="setting-row">
+        Recommend downloads
+      
+      <label class="switch">
+        <input type="checkbox" id="toggle-switch">
+        <span class="slider"></span>
+      </label>
+      </div>
+      
+    </div>
+
+    <div class="setting-card">
+      <button class="delete-down-btn">
+        Delete downloads 
+      </button>
+    </div>
+
+
+
+
+
+
+    <div class="head">
+      <h3>
+        Kids & family 
+      </h3>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+    <div class="setting-card">
+      <div class="setting-row">
+        Block mature content
+        <label class="switch">
+        <input type="checkbox" id="toggle-switch">
+        <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="setting-card">
+      <div class="setting-row">
+        Set restriction<select class="select">
+          <option>
+            Family 
+          </option>
+          <option>
+            4+
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="head">
+      <h3>
+        Rewards
+      </h3>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <div class="setting-card">
+      <div class="setting-row">
+        <p>
+          Enable rewards
+        </p>
+
+        <label class="switch">
+          <input type="checkbox" id="toggle-switch">
+
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+
+        <div class="head">
+      <h3>
+        Privacy and security
+      </h3>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <div class="setting-card">
+      <div class="setting-row">
+        <a href="#">
+          History
+        </a>
+
+        <button class="clock-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw-clock-icon lucide-rotate-ccw-clock"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+        </button>
+      </div>
+      <div class="setting-row">
+        <a href="#">
+          Delete search history 
+        </a>
+
+        <div class="trash-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="head">
+      <h3>
+        Account
+      </h3>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <div class="setting-card">
+      <div class="setting-row">
+        <button class="logout-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" width="24" height="24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"></path>
+          </svg>
+        </button>
+        <p>
+          Log out 
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div class="changes-not-parent">
+      <div class="changes-notification js-changes-notif">
+    <p>
+      Applied changes
+    </p>
+
+        <p class="change">
+        </p>
+      </div>
+  </div>
+
+
+  <script src="profile.js"></script>
+</body>
+</html>

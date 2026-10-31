@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | AI chat</title>
+    <link rel="stylesheet" href="Chatbot.css" />
+    <link rel="stylesheet" href="sandScript.css" />
+    <link rel="stylesheet" href="Sundoku.css" />
+  </head>
+  <body>
+    <div class="interaction-space">
+      <!--<div class="user-msg">
+    <p class="user-msg-text">
+      Hello
+    </p>
+    <div class="useful-info">
+<p class="time-sent">12:50 AM</p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-check-icon lucide-check-check check-check"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg>
+</div>
+    </div>
+  </div>-->
+
+      <!--<div class="ai-msg">
+   <p class="ai-msg-text">Hello, how can i help you today?.</p>
+    <div class="ai-response-btns">
+      <button class="ai-response-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--black)" class="size-6 ai-response-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"></path>
+        </svg>
+      </button>
+      <button class="ai-response-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--black)" class="size-6 ai-response-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"></path>
+        </svg>
+      </button>
+
+      <button class="ai-response-btn js-hide-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="var(--black)" class="size-6 ai-response-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+        </svg>
+      </button>
+    </div>
+    
+  </div>-->
+
+      <div class="user-msg">
+        <!--<p class="user-msg-text">
+    Hi
+  </p>
+
+  <div class="useful-info">
+<p class="time-sent">12:50 AM</p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-check-icon lucide-check-check check-check"><path d="M18 6 7 17l-5-5"/><path d="m22 10-7.5 7.5L13 16"/></svg>
+</div>
+  </div>-->
+      </div>
+    </div>
+
+    <div class="chatbot-header">
+      <button class="hamburger-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="var(--black)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-ellipsis-vertical preview-icon"
+        >
+          <circle cx="12" cy="12" r="1" />
+          <circle cx="12" cy="5" r="1" />
+          <circle cx="12" cy="19" r="1" />
+        </svg>
+      </button>
+
+      <div class="right-nav">
+        <p>Foundation</p>
+      </div>
+    </div>
+
+    <div class="js-menu menu">
+      <a href="index.html">
+        <div class="menu-row">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--black)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-left-icon lucide-arrow-left"
+          >
+            <path d="m12 19-7-7 7-7"></path>
+            <path d="M19 12H5"></path>
+          </svg>
+
+          <p>Home</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="chat-box-align">
+      <!--<div class="selected-imgs">
+    <img src="owl images/wall.png" class="selected-img" alt="Selected image">
+    <button>
+      Add another 
+    </button>
+  </div>-->
+
+      <div class="chat-box-container">
+        <div class="chat-box-btn-row">
+          <input
+            class="chat-box-input js-massage-input"
+            placeholder="Ask me anything"
+          />
+
+          <button class="recorde-btn action">
+            <!--hold to record-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--white)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-audio-lines-icon lucide-audio-lines"
+            >
+              <path d="M2 10v3" />
+              <path d="M6 6v11" />
+              <path d="M10 3v18" />
+              <path d="M14 8v7" />
+              <path d="M18 5v13" />
+              <path d="M22 10v3" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="Chatbot.js"></script>
+  </body>
+</html>

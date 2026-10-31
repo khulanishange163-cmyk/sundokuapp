@@ -1,0 +1,21 @@
+ .wishlistItem {
+   width: 100%;
+   background: var(--grey);
+   object-fit: contain;
+   display: inline-block;
+   justify-content: center;
+   align-content: center;
+   border-radius: 15px;
+ }
+
+.js-render-wishList {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 150px);
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+.wishlist-book {
+  width: 100%;
+}

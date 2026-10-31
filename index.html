@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="Sundoku.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top-layer">
+        <button class="header-hamburger js-hamburger">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="var(--black)"
+            class="size-6 hamburger-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 9h16.5m-16.5 6.75h16.5"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="logo-asset">
+          <img src="logos/Sundoku.webp" class="logo-img" />
+
+          <p class="logo">Sundoku</p>
+        </div>
+
+        <div>
+          <a href="notifications.html">
+            <button class="header-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--black)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-bell-icon lucide-bell"
+              >
+                <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                <path
+                  d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+                />
+              </svg>
+            </button>
+          </a>
+
+          <a href="profile.html">
+            <button class="header-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--black)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-round-icon lucide-user-round"
+              >
+                <circle cx="12" cy="8" r="5" />
+                <path d="M20 21a8 8 0 0 0-16 0" />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="search-center">
+          <div class="search-container">
+
+            <input
+              placeholder="Search by Book  name or Author"
+              class="search-input js-search-input"
+              id="search-input"
+            />
+
+            <button class="record-btn js-record-btn" id="mic-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--rough-grey)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mic-icon lucide-mic"
+              >
+                <path d="M12 19v3"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <rect x="9" y="2" width="6" height="13" rx="3"></rect>
+              </svg>
+            </button>
+
+            <button class="search-btn js-search-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-results-center">
+        <div class="results-box js-search-results">
+          <div class="js-searching-for-text"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="filter-scroll">
+      <button class="filter-btn filter-on" data-filter="all">All</button>
+
+      <button class="filter-btn" data-filter="popular">
+        Discovery & Popularity
+      </button>
+
+      <button class="filter-btn" data-filter="genres">genres</button>
+
+      <button class="filter-btn" data-filter="family">Family friendly</button>
+
+      <button class="filter-btn" data-filter="kids">Kids</button>
+
+      <button class="filter-btn" data-filter="teens">Teens/YA</button>
+
+      <button class="filter-btn" data-filter="adult">Adult</button>
+    </div>
+
+    <div class="hidden-menu js-hidden-menu">
+      <button class="close-menu-btn js-close-menu-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-x-icon lucide-x"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
+
+      <div class="hidden-menu-content">
+        <div class="center-branding">
+          <img src="Logos/Sundoku.webp" class="hidden-menu-logo" />
+          <p>
+            Stories shaped by a com<span class="gradient-text">Unity</span>.
+          </p>
+        </div>
+
+        <div class="hidden-item">
+          <h2>Creator account</h2>
+          <p class="hidden-item-sub-text">
+            For aspiring writers and people who just like telling stories
+          </p>
+          <button class="start-writter-account-btn">
+            Create writers account
+          </button>
+        </div>
+
+        <div class="hidden-item">
+          <h3>Help</h3>
+
+          <h3>Safety Policy</h3>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-element">
+      <h2 class="reading-heading">Continue reading</h2>
+
+      <div class="recent-scroll js-recent-books"></div>
+
+      <div class="events-heading-container">
+        <h2 class="event-heading">
+          What's Popping
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-right-icon lucide-chevron-right"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </h2>
+
+      <div>
+        <div class="scroll">
+          <!--CARD ONE!-->
+          <div class="hero-card">
+            <div class="vid-container">
+              <img
+                src="posters/gene_one.jpg"
+                class="hero-poster"
+              />
+            </div>
+
+            <div class="content">
+              <div class="label">
+                <p>App exclusive</p>
+              </div>
+              <p class="head-content">Foundation Intelligence</p>
+              <p class="sub-head-content">
+                AI will help more readers understand context better.
+              </p>
+
+              <a href="#">
+                              <button class="explore-btn">Discover</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="vid-container">
+              <img
+                src="posters/Booktok_poster_white_background.png"
+                class="hero-poster"
+                alt="hero card poster"
+              />
+            </div>
+
+            <div class="content">
+              <div class="label">
+                <p>Coming soon</p>
+              </div>
+              <h3>Booming On BookTok</h3>
+              <p class="sub-head-content">
+                Most discussed on Booktok communities
+              </p>
+
+              <button class="explore-btn">Discover</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-dots">
+        <div class="scroll-dots">
+          <div class="scroll-dot active-dot"></div>
+          <div class="scroll-dot"></div>
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+
+      <div class="center-shortcut">
+        <a href="Chatbot.html" class="shortcut-card-link">
+          <div class="shortcut-card">
+            <p>Ask Foundation AI</p>
+
+            <button class="arrow-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="var(--black)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right-icon lucide-arrow-right"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      
+
+      <div class="display-books js-render-books js-books-container"></div>
+
+      <div>
+        <h2 class="heading heading-container">
+          Genres
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-chevron-right-icon lucide-chevron-right"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </h2>
+
+        <div class="scroll">
+          <div class="genre-hero">
+            <h1 class="genre-heading">Genres</h1>
+
+            <img src="/" class="genre-hero-card-image" />
+
+            <button class="explore-btn">Explore</button>
+            <p class="smaller-genre-text">
+              Some books are a subject of copyright.*
+            </p>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <div class="genre-card">
+            <h3>Fantasy</h3>
+          </div>
+
+          <div class="genre-card">
+            <h3>Dystopia</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="center-nav">
+      <nav>
+        <a href="index.html">
+          <div class="nav-column">
+            <div class="upper-nav-section onpage">
+              <img
+                src="logos/Sundoku.webp"
+                class="nav-logo"
+                style="filter: invert(1)"
+              />
+            </div>
+
+            <p class="nav-label onpage-nav-label">Sundoku</p>
+          </div>
+        </a>
+
+        <a href="Chatbot.html">
+          <div class="nav-column">
+            <div class="upper-nav-section">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-message-circle-icon lucide-message-circle"
+              >
+                <path
+                  d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                ></path>
+              </svg>
+            </div>
+
+            <p class="nav-label">Foundation</p>
+          </div>
+        </a>
+
+        <a href="Wishlist.html">
+          <div class="nav-column">
+            <div class="upper-nav-section">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide"
+              >
+                <path
+                  d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+                ></path>
+              </svg>
+            </div>
+            <p class="nav-label">Wishlist</p>
+          </div>
+        </a>
+      </nav>
+    </div>
+
+    <div class="book-menu-hidden js-hidden-book-info"></div>
+
+    <script src="Sundoku.js"></script>
+  </body>
+</html>
