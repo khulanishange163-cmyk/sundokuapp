@@ -6,7 +6,7 @@ An AI powered book reading PWA with AI tools that help simplify, summerize and t
   <img src="screenshots/Reading_page.png">
 </p>
 
-# Link to the Sundoku:
+# Link to Sundoku:
 <a href="https://sundokuapp.vercel.app">Sundoku</a>
 
 # Features 
