@@ -618,7 +618,7 @@ window.addEventListener('scroll', () => {
       navigationBar.style.transform="translateY(100%)"
     } else {
       header.style.transform="translateY(0)";
-      navigationBar.style.transform="translateY(-1)"
+      navigationBar.style.transform="translateY(0)"
     }
       lastScrollY = window.scrollY;
       ticking = false;
