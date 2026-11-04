@@ -228,7 +228,7 @@ button {
   font-size: 23px;
   font-family: 'Inter', sans-serif;*/
 
-  width: 110px;
+  width: 105px;
   filter: invert(var(--reverse-invert));
 }
 
