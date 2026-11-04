@@ -157,6 +157,7 @@
   --light-header-color: rgba(0,0,0,0.53);
   --notDot-bdr: transparent;
   --invert: 0;
+  --reverse-invert: 1;
 }
 
 
@@ -172,6 +173,7 @@
   --notDot-bdr: rgb(255,255,255);
   --rough-grey: rgb(181,185,189);
   --invert: 1;
+  --reverse-invert: 0;
   --gradient: linear-gradient(
         180deg,
         var(--blue), black 
@@ -222,9 +224,12 @@ button {
 }
 
 .logo {
-  font-weight: 700;
+  /*font-weight: 700;
   font-size: 23px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;*/
+
+  width: 110px;
+  filter: invert(var(--reverse-invert));
 }
 
 .header-btn {
